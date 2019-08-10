@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body {
+  font-family: 'Hannotate SC',sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 242, 227);
+  color: rgb(46, 16, 3);
+  }

@@ -1,1 +1,15 @@
-%div Welcome to 'Fox and candy'!!
+= render "header"
+
+%main.answer_index
+  %h4.answer_index__description
+    %br'Fox and Candy !'は、かの有名パーティゲームをリスペクトした
+    %br 大喜利チャレンジアプリです。
+    %br 出題されたお題はSNS（Twitter）にシェアできます。
+  
+  %h4.answer_index__rules
+    %br【ルール説明】
+    %br １：下のボタンをクリックするとお題と使用可能なアイテムが３つ表示されます。
+    %br ２：シェアボタンを押すと、お題とアイテムをSNSにシェアできます。
+    %br ３：アイテムを１個以上使って、ナイスな回答をSNSへ呟いてみましょう！
+  
+  = link_to 'チャレンジする', new_answer_path, class: 'answer_index__link', data:{turbolinks: :false}
