@@ -20,3 +20,20 @@
     }
   }
 }
+
+.answer_index {
+  width: 600px;
+  margin: 0 auto;
+  &__link {
+    display: block;
+    background-color: rgb(185, 238, 85);
+    width:140px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(46, 16, 3);
+    border: 2px dotted rgb(49, 148, 10);
+    box-sizing: border-box;
+    margin: 50px auto;
+  }
+}
