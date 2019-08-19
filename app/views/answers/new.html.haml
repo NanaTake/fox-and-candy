@@ -1,0 +1,16 @@
+= render "header"
+
+%main.answer_new
+  = form_with url: root_path, local: true, class: 'answer_new__form' do |f|
+
+    .answer_new__form__item
+      %label{ for: "theme" } 【お題】
+      %br
+      %label 
+        = @theme.body
+    
+    .answer_new__form__item
+      %label{ for: "item" } 【使用可能アイテム】
+      %br
+      %label 
+        = @item_1.name + ' / ' + @item_2.name + ' / ' + @item_3.name

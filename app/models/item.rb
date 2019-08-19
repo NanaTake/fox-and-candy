@@ -2,7 +2,7 @@ class Item < ActiveHash::Base
   self.data = [
     {id: 1, name: 'チベットスナギツネ'},
     {id: 2, name: 'キャンディ'},
-    {id: 3, name: 'バナナ'},
+    {id: 3, name: 'クルーザー'},
     {id: 4, name: 'コイン'},
     {id: 5, name: 'ルビーの指輪'},
     {id: 6, name: 'あんぱん'},
@@ -17,7 +17,7 @@ class Item < ActiveHash::Base
     {id: 15, name: '口紅'},
     {id: 16, name: '札束'},
     {id: 17, name: '花火'},
-    {id: 18, name: '竹刀'},
+    {id: 18, name: '仏像'},
     {id: 19, name: 'バール'},
     {id: 20, name: 'おもちゃのピアノ'},
     {id: 21, name: '芝刈り機'},
@@ -29,6 +29,6 @@ class Item < ActiveHash::Base
     {id: 27, name: 'Tシャツ'},
     {id: 28, name: 'スマホ'},
     {id: 29, name: 'バケツ'},
-    {id: 30, name: '液体が入った小瓶'}
+    {id: 30, name: 'カブトムシ'}
   ]
 end
