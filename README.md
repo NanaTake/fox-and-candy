@@ -34,6 +34,7 @@ Things you may want to cover:
 |likes_count|integer?|index: true|
 
 ### Association -answer
+- extend ActiveHash::Associations::ActiveRecordExtensions
 - belongs_to_active_hash :theme
 - has_many :likes, dependent: :destroy
 
