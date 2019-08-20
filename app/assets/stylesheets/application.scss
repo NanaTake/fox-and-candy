@@ -14,7 +14,7 @@
  *= require_self
  */
 
- html, body {
+html, body {
   font-family: 'Hannotate SC',sans-serif;
   height: 100%;
   width: 100%;
@@ -23,4 +23,8 @@
   box-sizing: border-box;
   background-color: rgb(255, 242, 227);
   color: rgb(46, 16, 3);
-  }
+}
+
+.bold {
+  font-weight: bold;
+}

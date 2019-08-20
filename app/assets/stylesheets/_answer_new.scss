@@ -1,0 +1,15 @@
+.answer_new {
+  width: 600px;
+  margin: 50px auto;
+  &__form {
+    &__item {
+      margin: 30px 0;
+      label {
+        display: inline-block;
+        width: 600px;
+        text-align: center;
+        padding: 0 0 15px;
+      }
+    }
+  }
+}
