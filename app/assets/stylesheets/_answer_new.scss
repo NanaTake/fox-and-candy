@@ -10,6 +10,22 @@
         text-align: center;
         padding: 0 0 15px;
       }
+      &--wrap {
+        display: block;
+        width: 350px;
+        margin:0 auto;
+        .twitter-span {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
     }
+  }
+  &__link {
+    display: block;
+    margin: 70px auto 0;
+    text-decoration: none;
+    color: rgb(46, 16, 3);
+    width: 170px;
   }
 }

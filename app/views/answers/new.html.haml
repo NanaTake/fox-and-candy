@@ -17,3 +17,11 @@
 
     .answer_new__form__item
       %label{ for: "item" } ※最低1個はアイテムを使用して回答してください※
+
+    .answer_new__form__item
+      .answer_new__form__item--wrap
+        %a.twitter-share-button{data:{hashtags: "Fox and Candy !"}, data:{url: ""}, data:{lang: "ja"}, data:{'show-count' => "false"}, data:{size: "large"}, data:{text: "#【お題】#{@theme.body}\n#【使用可能アイテム】#{@item_1.name + ' / ' + @item_2.name + ' / ' + @item_3.name}\n#※最低1個はアイテムを使用して回答してください※"}, href: "https://twitter.com/share?ref_src=twsrc%5Etfw"} ツイート
+        %script{async: "", charset: "utf-8", src: "https://platform.twitter.com/widgets.js"}
+        %span.twitter-span ←Twitterでシェアして回答しよう！
+  
+  =link_to 'トップページに戻る', root_path, class: 'answer_new__link', data:{turbolinks: :false}
