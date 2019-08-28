@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 # lock '<Capistranoのバージョン>'
-lock "~> 3.11.0"
+lock "3.11.0"
 
 # Capistranoのログの表示に利用する
 set :application, "fox-and-candy"
@@ -54,6 +54,8 @@ set :ssh_options, auth_methods: ['publickey'],
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
+set :linked_files, fetch(:linked_files, []).push("config/master.key")
+
 # Unicornの設定ファイルの場所
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
@@ -62,6 +64,19 @@ set :keep_releases, 5
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
+    invoke 'unicorn:stop'
     invoke 'unicorn:restart'
   end
+
+  desc 'upload credentials.yml.enc'
+  task :upload do
+    on roles(:app) do |host|
+      if test "[ ! -d #{shared_path}/config ]"
+        execute "mkdir -p #{shared_path}/config"
+      end
+      upload!('config/credentials.yml.enc', "#{shared_path}/config/credentials.yml.enc")
+    end
+  end
+  before :starting, 'deploy:upload'
+  after :finishing, 'deploy:cleanup'
 end
