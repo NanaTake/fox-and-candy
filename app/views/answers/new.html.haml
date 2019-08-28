@@ -8,7 +8,6 @@
       %br
       %label 
         = @theme.body
-      %label 自動デプロイできた
     
     .answer_new__form__item
       %label.bold{ for: "item" } 【使用可能アイテム】
@@ -21,7 +20,7 @@
 
     .answer_new__form__item
       .answer_new__form__item--wrap
-        %a.twitter-share-button{data:{hashtags: "Fox and Candy !"}, data:{url: ""}, data:{lang: "ja"}, data:{'show-count' => "false"}, data:{size: "large"}, data:{text: "#Fox_and_Candy\n#お題\n##{@theme.body}\n#使用可能アイテム\n##{@item_1.name + '_' + @item_2.name + '_' + @item_3.name}\n#最低1個はアイテムを使用して回答してみてね"}, href: "https://twitter.com/share?ref_src=twsrc%5Etfw"} ツイート
+        %a.twitter-share-button{data:{hashtags: "Fox and Candy !"}, data:{url: "http://54.65.143.255/"}, data:{lang: "ja"}, data:{'show-count' => "false"}, data:{size: "large"}, data:{text: "#Fox_and_Candy\n#お題\n##{@theme.body}\n#使用可能アイテム\n##{@item_1.name + '_' + @item_2.name + '_' + @item_3.name}\n#最低1個はアイテムを使用して回答してみてね"}, href: "https://twitter.com/share?ref_src=twsrc%5Etfw"} ツイート
         %script{async: "", charset: "utf-8", src: "https://platform.twitter.com/widgets.js"}
         %span.twitter-span ←Twitterでシェアして回答しよう！
   
